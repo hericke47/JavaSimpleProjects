@@ -20,6 +20,7 @@ public class Biblioteca {
 
     public void remover(Livro livro) {
         estado.remover(livro, listaDeLivro);
+
     }
 
     public void setEstado(Estado estado) {

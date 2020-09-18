@@ -8,6 +8,6 @@ public class PeloMenosUm implements Estado{
             throw new RuntimeException("Pelo menos um.");
         }
             listaDeLivro.remover(livro);
-
     }
+
 }

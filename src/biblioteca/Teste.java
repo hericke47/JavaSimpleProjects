@@ -14,6 +14,8 @@ public class Teste {
 
         biblioteca.adicionar(a);
         biblioteca.adicionar(b);
+        biblioteca.remover(b);
+//        biblioteca.remover(a); deverá lançar a exessao quando tentar excluir o ultimo livro
 
         System.out.println(biblioteca.quantidadeDeLivros());
 
