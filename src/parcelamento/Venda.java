@@ -11,12 +11,13 @@ public class Venda {
     private float valor;
     private List<Parcela> parcelas;
 
-    private ServicoDePagamento servicoDePagamento = new ServicoDePagamento();
+    private ServicoDePagamento servicoDePagamento;
 
-    public Venda(String numero, LocalDate data, float valor) {
+    public Venda(String numero, LocalDate data, float valor, ServicoDePagamento servicoDePagamento) {
         this.numero = numero;
         this.data = data;
         this.valor = valor;
+        this.servicoDePagamento = servicoDePagamento;
         this.parcelas = new ArrayList<>();
     }
 
