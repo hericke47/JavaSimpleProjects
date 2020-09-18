@@ -11,6 +11,8 @@ public class Venda {
     private float valor;
     private List<Parcela> parcelas;
 
+    private ServicoDePagamento servicoDePagamento = new ServicoDePagamento();
+
     public Venda(String numero, LocalDate data, float valor) {
         this.numero = numero;
         this.data = data;
@@ -40,8 +42,8 @@ public class Venda {
 
             for(int i = 1; i <= quantidadeDeParcelas; i++ ){
                 LocalDate dataDeVencimento = this.data.plusMonths(i);
-                float juro = valorParcelaBase * 0.01f * i;
-                float taxa = (valorParcelaBase + juro) * 0.02f;
+                float juro = servicoDePagamento.calcularJuro(valorParcelaBase, i);
+                float taxa = servicoDePagamento.calcularTaxa(valorParcelaBase + juro);
                 float valorParcela = valorParcelaBase + juro + taxa;
 
 
