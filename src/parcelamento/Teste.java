@@ -10,7 +10,7 @@ public class Teste {
         for(Parcela parcela: venda.getParcelas()) {
             System.out.println(parcela.getData());
             System.out.println(parcela.getValor());
-
         }
+
     }
 }
