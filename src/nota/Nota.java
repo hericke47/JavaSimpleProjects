@@ -9,14 +9,16 @@ public class Nota {
     private String cnpj;
     private Calendar dataDeEmissao;
     private double valorBruto;
-    private List<ItemNota> itens;
+    private double impostos;
+    private List<ItemDaNota> itens;
     private String observaçoes;
 
-    public Nota(String razaoSocial, String cnpj, Calendar dataDeEmissao, double valorBruto, List<ItemNota> itens, String observaçoes) {
+    public Nota(String razaoSocial, String cnpj, Calendar dataDeEmissao, double valorBruto, double impostos, List<ItemDaNota> itens, String observaçoes) {
         this.razaoSocial = razaoSocial;
         this.cnpj = cnpj;
         this.dataDeEmissao = dataDeEmissao;
         this.valorBruto = valorBruto;
+        this.impostos = impostos;
         this.itens = itens;
         this.observaçoes = observaçoes;
     }
@@ -53,11 +55,19 @@ public class Nota {
         this.valorBruto = valorBruto;
     }
 
-    public List<ItemNota> getItens() {
+    public double getImpostos() {
+        return impostos;
+    }
+
+    public void setImpostos(double impostos) {
+        this.impostos = impostos;
+    }
+
+    public List<ItemDaNota> getItens() {
         return itens;
     }
 
-    public void setItens(List<ItemNota> itens) {
+    public void setItens(List<ItemDaNota> itens) {
         this.itens = itens;
     }
 

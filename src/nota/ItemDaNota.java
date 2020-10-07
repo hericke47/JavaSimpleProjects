@@ -1,10 +1,10 @@
 package nota;
 
-public class ItemNota {
+public class ItemDaNota {
     private String item;
     private float preco;
 
-    public ItemNota(String item, float preco) {
+    public ItemDaNota(String item, float preco) {
         this.item = item;
         this.preco = preco;
     }
