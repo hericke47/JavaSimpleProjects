@@ -19,7 +19,10 @@ public class Teste {
             valorBruto += itemDaNota.getPreco();
         }
 
-        double impostos = valorBruto * 0.9;
+        double impostos = valorBruto * 0.1;
+
+        System.out.println(valorBruto);
+        System.out.println(impostos);
 
 
 
